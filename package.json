@@ -1,11 +1,11 @@
 {
-  "name": "jsonresume-theme-spartan",
-  "version": "0.2.1",
-  "description": "Minimal, clean and elegant theme for JSON Resume",
-  "author": "Francesco Esposito <fraesps@gmail.com>",
+  "name": "jsonresume-theme-spartan-skills",
+  "version": "0.0.1",
+  "description": "Clone of jsonresume-theme-spartan wit hmore focus of skills section",
+  "author": "Saad Shahd <dev.saad.shahd@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/francescoes/jsonresume-theme-spartan"
+    "url": "https://github.com/saadshahd/jsonresume-theme-spartan"
   },
   "license": "MIT",
   "dependencies": {
