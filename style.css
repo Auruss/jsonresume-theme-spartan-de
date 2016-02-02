@@ -251,6 +251,10 @@ h2.section-title {
 	font-style: italic;
 }
 
+.keywords {
+	line-height: 2;
+}
+
 .courses li, .keywords li{
 	display: inline-block;
 	background: #f0f0f0;
