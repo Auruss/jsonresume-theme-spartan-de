@@ -184,6 +184,40 @@
     </section>
     {{/if}}
 
+    {{#if resume.publications.length}}
+    <section class="section">
+      <h2 class="section-title">Publications</h2>
+      <section id="publications">
+        {{#each resume.publications}}
+        <div class="item">
+          {{#if name}}
+          <span class="name">
+          	{{#if website}}
+          	<span class="website">
+          	  <a href="{{website}}">{{name}}</a>
+          	</span>
+          	{{else}}
+          	{{name}}
+          	{{/if}}
+          </span>
+          {{/if}}
+          {{#if publisher}}
+          <span class="publisher">in {{publisher}},</span>
+          {{/if}}
+          {{#if releaseDate}}
+          <span class="date">{{DMY releaseDate}}</span>
+          {{/if}}
+          {{#if summary}}
+          <div class="summary">
+    	      <p>{{summary}}</p>
+          </div>
+          {{/if}}
+        </div>
+        {{/each}}
+      </section>
+    </section>
+    {{/if}}
+
     {{#if resume.education.length}}
     <section class="section">
       <h2 class="section-title">Education</h2>
@@ -292,40 +326,6 @@
           {{/if}}
           {{#if awarder}}
           <div class="awarder">{{awarder}}</div>
-          {{/if}}
-          {{#if summary}}
-          <div class="summary">
-    	      <p>{{summary}}</p>
-          </div>
-          {{/if}}
-        </div>
-        {{/each}}
-      </section>
-    </section>
-    {{/if}}
-
-    {{#if resume.publications.length}}
-    <section class="section">
-      <h2 class="section-title">Publications</h2>
-      <section id="publications">
-        {{#each resume.publications}}
-        <div class="item">
-          {{#if name}}
-          <span class="name">
-          	{{#if website}}
-          	<span class="website">
-          	  <a href="{{website}}">{{name}}</a>
-          	</span>
-          	{{else}}
-          	{{name}}
-          	{{/if}}
-          </span>
-          {{/if}}
-          {{#if publisher}}
-          <span class="publisher">in {{publisher}},</span>
-          {{/if}}
-          {{#if releaseDate}}
-          <span class="date">{{DMY releaseDate}}</span>
           {{/if}}
           {{#if summary}}
           <div class="summary">
