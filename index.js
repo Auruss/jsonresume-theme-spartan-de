@@ -1,11 +1,11 @@
-var fs = require("fs");
-var Handlebars = require("handlebars");
-var moment = require("moment");
+var fs = require('fs');
+var Handlebars = require('handlebars');
+var moment = require('moment');
 
 function render(resume) {
-	var css = fs.readFileSync(__dirname + "/style.css", "utf-8");
-	var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
-	
+	var css = fs.readFileSync(__dirname + '/style.css', 'utf-8');
+	var tpl = fs.readFileSync(__dirname + '/resume.hbs', 'utf-8');
+
 	return Handlebars.compile(tpl)({
 		css: css,
 		resume: resume
@@ -19,16 +19,12 @@ module.exports = {
 
 /* HANDLEBARS HELPERS */
 Handlebars.registerHelper('paragraphSplit', function(plaintext) {
-    var lines = plaintext.split(/\r\n|\r|\n/g);
-    var output = '';
-    var i;
+  var lines = plaintext.split(/\r\n|\r|\n/g);
+  var output = lines.map(function(line) {
+		return line ? '<p>' + line + '</p>' : '';
+	}).join('\n');
 
-    for (i = 0; i < lines.length; i+=1) {
-        if(lines[i]) {
-            output += '<p>' + lines[i] + '</p>';
-        }
-    }
-    return new Handlebars.SafeString(output);
+  return new Handlebars.SafeString(output);
 });
 
 Handlebars.registerHelper('toLowerCase', function(str) {
