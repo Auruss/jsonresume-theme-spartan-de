@@ -212,7 +212,7 @@
             {{/if}}
             {{#if summary}}
             <div class="summary">
-      	      <p>{{summary}}</p>
+      	      {{paragraphSplit summary}}
             </div>
             {{/if}}
           </div>
@@ -388,7 +388,7 @@
           {{#each resume.references}}
           <div class="item">
             {{#if reference}}
-            <blockquote class="reference">“{{reference}}”</blockquote>
+            <blockquote class="reference">“{{paragraphSplit reference}}”</blockquote>
             {{/if}}
             {{#if name}}
             <div class="name">{{name}}</div>
